@@ -622,7 +622,7 @@ public class ConnectDB {
         try {
            
             st = cnx.createStatement();
-            String sql1 = "INSERT INTO `facture`( `nom_prenom_forn`, `montant_facture`,`date_facture`) "
+            String sql1 = "INSERT INTO `facture`( `fornisseur`, `somme`,`date`) "
                     + "VALUES ('" + nom_prenom_forn + "'," + 0  + ",'" + showDate() + "') ";
             st.executeUpdate(sql1);
         } catch (SQLException ex) {
@@ -722,6 +722,20 @@ public class ConnectDB {
 
         try {
             String sql = "Update fact_v set somme ='" + montant + "',credit ='" + credit + "'"+
+                    ",verement ='" + verment + "'"+
+                     " where  	n_fact=" + id;
+            System.out.println(sql);
+            st.executeUpdate(sql);
+        } catch (SQLException ex) {
+            Logger.getLogger(ConnectDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }
+
+    public void UpdatFacture_a(int id, float montant, float credit, float verment) {
+
+        try {
+            String sql = "Update facture set somme ='" + montant + "',credit ='" + credit + "'"+
                     ",verement ='" + verment + "'"+
                      " where  	n_fact=" + id;
             System.out.println(sql);
@@ -922,6 +936,27 @@ public void FindPrix(String des, JTextField jt) {
             Logger.getLogger(ConnectDB.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(null, ex + " error in recuperitaion");
         }
+    } 
+
+public Float FindPrix(String des) {
+     Float f = null;
+        try {
+            
+            String sql = "select prix_achat from stock where designation = '"+des +"'";
+
+            st = cnx.createStatement();
+            rst = st.executeQuery(sql);
+            //  DecimalFormat df=new DecimalFormat("0.00");
+            if (rst.next()) {
+
+                 f = rst.getFloat("prix_achat");
+                }
+
+        } catch (SQLException ex) {
+            Logger.getLogger(ConnectDB.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null, ex + " error in recuperitaion");
+        }
+        return f;
     } 
 
 public int Findant(String des) {
@@ -1285,6 +1320,23 @@ public int Findant(String des) {
         return credit;
     }
     
+    
+     public String Get_credit_f(String nom) throws SQLException{
+        String credit = null;
+        
+        st = cnx.createStatement();
+        String sql = "select credit from fornisseur where nom_prenom = '"+nom+"'";
+        rst = st.executeQuery(sql);
+         while (rst.next()) {
+
+                credit = rst.getFloat("credit")+"";
+            }
+         System.out.println(credit);
+        return credit;
+    }
+    
+     
+     
     public void FindNomPrenomClient(JComboBox combo) {
         
         try {
@@ -1312,8 +1364,8 @@ public int Findant(String des) {
 
         try {
             st = cnx.createStatement();
-            String sql1 = "INSERT INTO vente( nom_prenom_client, designation, prix,qnt,prix_total,date_vente, factv_id) "
-                    + "VALUES ('" + V.getNom_prenom() + "'," + "'" + V.getDesignation()  + "','" + V.getMontant() +"','" 
+            String sql1 = "INSERT INTO vente( nom_prenom_client, designation, prix,gain,qnt,prix_total,date_vente, factv_id) "
+                    + "VALUES ('" + V.getNom_prenom() + "'," + "'" + V.getDesignation()  + "','" + V.getMontant() +"','" + V.getGain() +"','"
                     + V.getQnt()+"','"+ V.getMontant()*V.getQnt() + "','"+V.getDate() +"','"+ V.getFact()+"')";
             System.out.println(sql1);
             st.executeUpdate(sql1);

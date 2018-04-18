@@ -16,15 +16,17 @@ public class Vente {
     private String designation;
     
     private float montant;
+    private float gain;
     private int qnt;
     private String date;
     private int fact;
 
-    public Vente( String nom_prenom, String designation, float montant, int qnt, String date, int fact) {
+    public Vente( String nom_prenom, String designation, float montant, float gain, int qnt, String date, int fact) {
        
         this.nom_prenom = nom_prenom;
         this.designation = designation;
         this.montant = montant;
+        this.gain = gain;
         this.qnt = qnt;
         this.date = date;
         this.fact = fact;
@@ -39,6 +41,38 @@ public class Vente {
      */
     public String getNom_prenom() {
         return nom_prenom;
+    }
+
+    public float getGain() {
+        return gain;
+    }
+
+    public void setNom_prenom(String nom_prenom) {
+        this.nom_prenom = nom_prenom;
+    }
+
+    public void setDesignation(String designation) {
+        this.designation = designation;
+    }
+
+    public void setMontant(float montant) {
+        this.montant = montant;
+    }
+
+    public void setGain(float gain) {
+        this.gain = gain;
+    }
+
+    public void setQnt(int qnt) {
+        this.qnt = qnt;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public void setFact(int fact) {
+        this.fact = fact;
     }
 
     /**

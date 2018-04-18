@@ -24,9 +24,9 @@ public class Fact_v_frame extends javax.swing.JFrame {
      */
     public Fact_v_frame(String somme, String credit) {
         initComponents();
-        jTextField2.setText(somme);
-        jTextField1.setText(credit);
-        jTextField5.setText(Float.parseFloat(jTextField1.getText())+Float.parseFloat(jTextField2.getText())+"");
+        sommeV.setText(somme);
+        creditV.setText(credit);
+        newV.setText(Float.parseFloat(creditV.getText())+Float.parseFloat(sommeV.getText())+"");
         
     }
 
@@ -44,11 +44,11 @@ public class Fact_v_frame extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
+        creditV = new javax.swing.JTextField();
+        sommeV = new javax.swing.JTextField();
+        verV = new javax.swing.JTextField();
+        restV = new javax.swing.JTextField();
+        newV = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -60,30 +60,30 @@ public class Fact_v_frame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jTextField1.setBackground(new java.awt.Color(0, 0, 255));
-        jTextField1.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(255, 255, 0));
+        creditV.setBackground(new java.awt.Color(0, 0, 255));
+        creditV.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        creditV.setForeground(new java.awt.Color(255, 255, 0));
 
-        jTextField2.setBackground(new java.awt.Color(0, 0, 255));
-        jTextField2.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
-        jTextField2.setForeground(new java.awt.Color(255, 255, 0));
+        sommeV.setBackground(new java.awt.Color(0, 0, 255));
+        sommeV.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        sommeV.setForeground(new java.awt.Color(255, 255, 0));
 
-        jTextField3.setBackground(new java.awt.Color(0, 0, 255));
-        jTextField3.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
-        jTextField3.setForeground(new java.awt.Color(255, 255, 0));
-        jTextField3.addKeyListener(new java.awt.event.KeyAdapter() {
+        verV.setBackground(new java.awt.Color(0, 0, 255));
+        verV.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        verV.setForeground(new java.awt.Color(255, 255, 0));
+        verV.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTextField3KeyPressed(evt);
+                verVKeyPressed(evt);
             }
         });
 
-        jTextField4.setBackground(new java.awt.Color(0, 0, 255));
-        jTextField4.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
-        jTextField4.setForeground(new java.awt.Color(255, 255, 0));
+        restV.setBackground(new java.awt.Color(0, 0, 255));
+        restV.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        restV.setForeground(new java.awt.Color(255, 255, 0));
 
-        jTextField5.setBackground(new java.awt.Color(0, 0, 255));
-        jTextField5.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
-        jTextField5.setForeground(new java.awt.Color(255, 255, 0));
+        newV.setBackground(new java.awt.Color(0, 0, 255));
+        newV.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        newV.setForeground(new java.awt.Color(255, 255, 0));
 
         jButton1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jButton1.setText("تأكيــــــــــــــد");
@@ -117,11 +117,11 @@ public class Fact_v_frame extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(47, 47, 47)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(restV, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(creditV, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(sommeV, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(newV, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(verV, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(43, 43, 43)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel4)
@@ -139,23 +139,23 @@ public class Fact_v_frame extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(35, 35, 35)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(sommeV, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
                 .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(creditV, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(newV, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(verV, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(restV, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6))
                 .addGap(18, 18, 18)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -165,30 +165,30 @@ public class Fact_v_frame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField3KeyPressed
+    private void verVKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_verVKeyPressed
         int key = evt.getKeyCode();
         if (key == KeyEvent.VK_ENTER){
-            jTextField4.setText(Float.parseFloat(jTextField3.getText())- Float.parseFloat(jTextField5.getText())+"");
+            restV.setText(Float.parseFloat(verV.getText())- Float.parseFloat(newV.getText())+"");
         }
-    }//GEN-LAST:event_jTextField3KeyPressed
+    }//GEN-LAST:event_verVKeyPressed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         try {
             float montant = 0;
             Connection cnx = db.cnx;
            
-            String sql = "select credit FROM `client` WHERE nom_prenom = '" + (String)Main_frame.jComboBox1.getSelectedItem() + "'  ";
+            String sql = "select credit FROM `client` WHERE nom_prenom = '" + (String)Main_frame.jComboBox4.getSelectedItem() + "'  ";
             System.out.println(sql);
             Statement st = cnx.createStatement();
             ResultSet rst = (ResultSet)st.executeQuery(sql);
            while(rst.next()){
-                 montant = rst.getFloat("credit")+ Float.parseFloat(jTextField4.getText());
+                 montant = rst.getFloat("credit")+ Float.parseFloat(restV.getText());
                
            }
             
             String sql2 = "Update fornisseur set credit='"+ montant + 
                  "'"+ "where nom_prenom= '" 
-                + (String)jComboBox1.getSelectedItem()+"'";
+                + (String)Main_frame.jComboBox4.getSelectedItem()+"'";
             
         db.UpdatStock(sql2);
       //  db.AllStock(jTable1);
@@ -233,6 +233,7 @@ public class Fact_v_frame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField creditV;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -240,11 +241,10 @@ public class Fact_v_frame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField newV;
+    private javax.swing.JTextField restV;
+    private javax.swing.JTextField sommeV;
+    private javax.swing.JTextField verV;
     // End of variables declaration//GEN-END:variables
 ConnectDB db = new ConnectDB();
 }

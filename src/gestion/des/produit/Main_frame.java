@@ -117,6 +117,18 @@ newproduit np;
         jLabel29 = new javax.swing.JLabel();
         jLabel30 = new javax.swing.JLabel();
         jLabel31 = new javax.swing.JLabel();
+        Fact_a_f = new javax.swing.JFrame();
+        sommeA = new javax.swing.JTextField();
+        creditA = new javax.swing.JTextField();
+        nsommeA = new javax.swing.JTextField();
+        vermentA = new javax.swing.JTextField();
+        restA = new javax.swing.JTextField();
+        jButton29 = new javax.swing.JButton();
+        jLabel32 = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
+        jLabel34 = new javax.swing.JLabel();
+        jLabel35 = new javax.swing.JLabel();
+        jLabel36 = new javax.swing.JLabel();
         jTabbedPane2 = new javax.swing.JTabbedPane();
         jPanel2 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
@@ -368,10 +380,125 @@ newproduit np;
                 .addContainerGap(371, Short.MAX_VALUE))
         );
 
+        Fact_a_f.setLocation(new java.awt.Point(200, 200));
+        Fact_a_f.setSize(new java.awt.Dimension(500, 500));
+        Fact_a_f.addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowActivated(java.awt.event.WindowEvent evt) {
+                Fact_a_fWindowActivated(evt);
+            }
+        });
+
+        sommeA.setBackground(new java.awt.Color(0, 0, 255));
+        sommeA.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        sommeA.setForeground(new java.awt.Color(255, 255, 0));
+
+        creditA.setBackground(new java.awt.Color(0, 0, 255));
+        creditA.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        creditA.setForeground(new java.awt.Color(255, 255, 0));
+
+        nsommeA.setBackground(new java.awt.Color(0, 0, 255));
+        nsommeA.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        nsommeA.setForeground(new java.awt.Color(255, 255, 0));
+
+        vermentA.setBackground(new java.awt.Color(0, 0, 255));
+        vermentA.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        vermentA.setForeground(new java.awt.Color(255, 255, 0));
+        vermentA.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                vermentAKeyPressed(evt);
+            }
+        });
+
+        restA.setBackground(new java.awt.Color(0, 0, 255));
+        restA.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        restA.setForeground(new java.awt.Color(255, 255, 0));
+        restA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                restAActionPerformed(evt);
+            }
+        });
+
+        jButton29.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jButton29.setText("تأكيــــــــــــــد");
+        jButton29.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton29ActionPerformed(evt);
+            }
+        });
+
+        jLabel32.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel32.setText("الباقــــي");
+
+        jLabel33.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel33.setText("المبلغ المدفوع");
+
+        jLabel34.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel34.setText("المجموع الجديـــــد");
+
+        jLabel35.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel35.setText("القديــــــم");
+
+        jLabel36.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel36.setText("المجموع");
+
+        javax.swing.GroupLayout Fact_a_fLayout = new javax.swing.GroupLayout(Fact_a_f.getContentPane());
+        Fact_a_f.getContentPane().setLayout(Fact_a_fLayout);
+        Fact_a_fLayout.setHorizontalGroup(
+            Fact_a_fLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Fact_a_fLayout.createSequentialGroup()
+                .addGroup(Fact_a_fLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Fact_a_fLayout.createSequentialGroup()
+                        .addGap(47, 47, 47)
+                        .addGroup(Fact_a_fLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(restA, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(creditA, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(sommeA, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(nsommeA, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(vermentA, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(43, 43, 43)
+                        .addGroup(Fact_a_fLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel34)
+                            .addComponent(jLabel36, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel35, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel33, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel32, javax.swing.GroupLayout.Alignment.LEADING)))
+                    .addGroup(Fact_a_fLayout.createSequentialGroup()
+                        .addGap(119, 119, 119)
+                        .addComponent(jButton29, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        Fact_a_fLayout.setVerticalGroup(
+            Fact_a_fLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Fact_a_fLayout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addGroup(Fact_a_fLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(sommeA, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel36))
+                .addGap(28, 28, 28)
+                .addGroup(Fact_a_fLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(creditA, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel35))
+                .addGap(18, 18, 18)
+                .addGroup(Fact_a_fLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nsommeA, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel34))
+                .addGap(18, 18, 18)
+                .addGroup(Fact_a_fLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(vermentA, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel33))
+                .addGap(18, 18, 18)
+                .addGroup(Fact_a_fLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(restA, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel32))
+                .addGap(18, 18, 18)
+                .addComponent(jButton29, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(371, Short.MAX_VALUE))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("تسيير المخون والمبيعات");
         setBounds(new java.awt.Rectangle(200, 120, 0, 0));
-        setLocation(new java.awt.Point(-20, -20));
+        setLocation(new java.awt.Point(0, 0));
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowActivated(java.awt.event.WindowEvent evt) {
                 formWindowActivated(evt);
@@ -570,7 +697,7 @@ newproduit np;
 
             },
             new String [] {
-                "الرقـــم", "الممـــــون", " التعييـــــن", "الكميــــــة", " السعر الاجمالي", "السعر الوحدوي", "التاريخ", "رقم الفاتورة"
+                "الرقـــم", " التعييـــــن", "الكميــــــة", "السعر الوحدوي", "السعر الاجمالي"
             }
         ));
         jTable2.setGridColor(new java.awt.Color(0, 204, 204));
@@ -1317,7 +1444,7 @@ newproduit np;
         AutoCompletion.enable(jComboBox1);
          AutoCompletion.enable(jComboBox4);
           AutoCompletion.enable(jComboBox5);
-        db.AllAchat(jTable2);
+        
         db.AllFornisseur(jTable4);
         db.AllStock(jTable1);
         db.AllClient(jTable3);
@@ -1357,17 +1484,15 @@ newproduit np;
         // TODO add your handling code here:
         jDialog1.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
-int m = 0;
+Float m = 0.0f;
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         try{  Achat ach=new Achat(0,jComboBox1.getSelectedItem()+"", (String) jComboBox3.getSelectedItem(),Integer.parseInt(jTextField2.getText()) , Float.parseFloat(jTextField4.getText()), Float.parseFloat(jTextField5.getText()),db.showDate(),Integer.parseInt(jTextField1.getText()));
         db.inserAchat(ach);
        
-        db.AllAchat(jTable2);
         }catch(Exception e){
             JOptionPane.showMessageDialog(null, "ereur de saisis "+ e.getMessage());
         }
-        
-        
+     
         try {
             int qnt = 0;
             cnx = db.cnx;
@@ -1390,10 +1515,31 @@ int m = 0;
         } catch (Exception e){
             System.out.println("000000"+e.getMessage());
         }
-        m = m + (Integer.parseInt(jTextField2.getText())* Integer.parseInt(jTextField5.getText()));
+        m = m + (Float.parseFloat(jTextField2.getText())* Float.parseFloat(jTextField5.getText()));
         jTextField4.setText(m+"");
-        jTextField2.setText("");
+       
+        DefaultTableModel mo = (DefaultTableModel) jTable2.getModel();
+            
+            DecimalFormat df = new DecimalFormat("0.00");
+            Object row[] = new Object[5];
+            
+                row[0] = db.Find_Last_v();
+                row[1] = jComboBox3.getSelectedItem().toString(); 
+                row[2] = Integer.parseInt(jTextField2.getText());
+                row[3] = Float.parseFloat(jTextField5.getText());
+                row[4] = (float)row[3]* (int)row[2];
+                
+                mo.addRow(row);
+                TableColumnModel columnModel = jTable2.getColumnModel();
+                for(int i = 0; i<jTable2.getColumnCount(); i++){
+      TableColumn column = columnModel.getColumn(i); 
+      DefaultTableCellRenderer renderer = new DefaultTableCellRenderer();
+      renderer.setHorizontalAlignment(JLabel.RIGHT);
+      column.setCellRenderer(renderer);
+       jTextField2.setText("");
         jTextField5.setText("");
+                }  
+        
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
@@ -1409,15 +1555,7 @@ int m = 0;
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        try
-        { Achat ach=new Achat(0,jComboBox1.getSelectedItem()+"", jComboBox2.getSelectedItem()+"",
-            Integer.parseInt(jTextField4.getText()) ,Float.parseFloat(jTextField5.getText()), 0,
-            null,0);
-        db.UpdatAchat(Integer.parseInt(jTextField1.getText()), ach);
-        jLabel8.setText(db.AllAchat(jTable1)+" DA");
-        }catch(Exception e){
-            JOptionPane.showMessageDialog(null, "eruer operation");
-        }
+        
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
@@ -1468,39 +1606,17 @@ System.out.println(e.getMessage());
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
-        // TODO add your handling code here:
-        db.UpdatFacture(Integer.parseInt(jTextField1.getText()), Integer.parseInt(jTextField4.getText()));
         try {
-            float montant = 0;
-            cnx = db.cnx;
-           
-            String sql = "select credit FROM `fornisseur` WHERE nom_prenom = '" + (String)jComboBox1.getSelectedItem() + "'  ";
-            System.out.println(sql);
-            st = cnx.createStatement();
-            rst = (ResultSet)st.executeQuery(sql);
-           while(rst.next()){
-                 montant = rst.getFloat("credit")+ Float.parseFloat(jTextField4.getText());
-               
-           }
-            
-            String sql2 = "Update fornisseur set credit='"+ montant + 
-                 "'"+ "where nom_prenom= '" 
-                + (String)jComboBox1.getSelectedItem()+"'";
-            
-        db.UpdatStock(sql2);
-        db.AllStock(jTable1);
-        } catch (Exception e){
-            System.out.println("000000"+e.getMessage());
-        }
-        jTextField2.setText("");
-        jTextField5.setText("");
-        jTextField4.setText("");
-        jTextField1.setText("");
-        jComboBox1.setEditable(false);
-        jComboBox3.setEditable(false);
-        jTextField2.setEditable(false);
-        jTextField5.setEditable(false);
-        
+         vermentA.setText("");
+         restA.setText("");
+        // fv = new Fact_v_frame(jTextField18.getText(),db.Get_credit(jComboBox4.getSelectedItem().toString()));
+        creditA.setText(db.Get_credit_f(jComboBox1.getSelectedItem().toString()));
+        sommeA.setText(jTextField4.getText());
+        nsommeA.setText(Float.parseFloat(creditA.getText())+Float.parseFloat(sommeA.getText())+"");
+     } catch (SQLException ex) {
+         Logger.getLogger(Main_frame.class.getName()).log(Level.SEVERE, null, ex);
+     }
+     Fact_a_f.setVisible(true);
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
@@ -1647,6 +1763,7 @@ System.out.println(e.getMessage());
 float total = 0;
     private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
         // TODO add your handling code here:
+        jTextField18.setText("");
          db=new ConnectDB();db.ConnexionIntoDataBase();
         db.inserFacture_v(jComboBox4.getSelectedItem().toString(), db.showDate());
         jTextField21.setText(db.FindFact_v());
@@ -1665,11 +1782,12 @@ float total = 0;
         Toolkit.getDefaultToolkit().beep(); 
          if (db.Findant(jComboBox5.getSelectedItem().toString())< Integer.parseInt(jTextField20.getText()) ){
              JOptionPane.showMessageDialog(null, "الكمية المطلوبة غير متوفرة");
-         }else {
-         total = total + (Integer.parseInt(jTextField20.getText()) * Float.parseFloat( jTextField19.getText()));
+         }
+         else {
+         total = total + (Float.parseFloat(jTextField20.getText()) * Float.parseFloat( jTextField19.getText()));
         jTextField18.setText(total +"");
         Vente v = new Vente(jComboBox4.getSelectedItem().toString(),jComboBox5.getSelectedItem().toString(),
-        Float.parseFloat(jTextField19.getText()), Integer.parseInt(jTextField20.getText()), db.showDate(), Integer.parseInt(jTextField21.getText()));
+        Float.parseFloat(jTextField19.getText()),(Float.parseFloat(jTextField19.getText())-db.FindPrix(jComboBox5.getSelectedItem().toString()))*Integer.parseInt(jTextField20.getText()), Integer.parseInt(jTextField20.getText()), db.showDate(), Integer.parseInt(jTextField21.getText()));
         db.insertVente(v);
           DefaultTableModel mo = (DefaultTableModel) jTable5.getModel();
             
@@ -1785,6 +1903,64 @@ float total = 0;
     private void jButton28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton28ActionPerformed
       db.AllStock(jTable1);
     }//GEN-LAST:event_jButton28ActionPerformed
+
+    private void vermentAKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_vermentAKeyPressed
+        int key = evt.getKeyCode();
+        if (key == KeyEvent.VK_ENTER){
+            restA.setText(Float.parseFloat(nsommeA.getText())- Float.parseFloat(vermentA.getText())+"");
+        }
+    }//GEN-LAST:event_vermentAKeyPressed
+
+    private void jButton29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton29ActionPerformed
+        try {
+            
+
+            String sql2 = "Update fornisseur set credit='"+ restA.getText() +
+            "'"+ "where nom_prenom= '"
+            + (String)jComboBox1.getSelectedItem()+"'";
+             
+
+            db.UpdatStock(sql2);
+            db.UpdatFacture_v(Integer.parseInt(jTextField21.getText()), Float.parseFloat(sommeT.getText()),
+                    Float.parseFloat(creditT.getText()),Float.parseFloat(vermentT.getText()));
+            //  db.AllStock(jTable1);
+        } catch (Exception e){
+            System.out.println("000000"+e.getMessage());
+        }
+        for (int i = 0; i< jTable2.getRowCount()+1; i++) 
+        {
+        try {
+            int qnt = 0;
+            cnx = db.cnx;
+           
+            String sql = "select qnt FROM `stock` WHERE designation = '" + jTable2.getValueAt(i, 1) + "'  ";
+            System.out.println(sql);
+            st = cnx.createStatement();
+            rst = (ResultSet)st.executeQuery(sql);
+           while(rst.next()){
+                 qnt = rst.getInt("qnt")+ Integer.parseInt(jTable2.getValueAt(i, 2).toString());
+               
+           }
+            
+            String sql2 = "Update stock set qnt='"+ qnt + 
+                 "'"+ "where designation= '" 
+                + jTable2.getValueAt(i, 1)+"'";
+            
+        db.UpdatStock(sql2);
+        db.AllStock(jTable1);
+        } catch (Exception e){
+            System.out.println("000000"+e.getMessage());
+        }}
+        
+    }//GEN-LAST:event_jButton29ActionPerformed
+
+    private void Fact_a_fWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_Fact_a_fWindowActivated
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Fact_a_fWindowActivated
+
+    private void restAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_restAActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_restAActionPerformed
     
     /**
      * @param args the command line arguments
@@ -1822,7 +1998,9 @@ float total = 0;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JFrame Fact_a_f;
     private javax.swing.JFrame Fact_v_f;
+    private javax.swing.JTextField creditA;
     private javax.swing.JTextField creditT;
     private javax.swing.JTextField creditText;
     private javax.swing.JButton jButton1;
@@ -1845,15 +2023,16 @@ float total = 0;
     private javax.swing.JButton jButton26;
     private javax.swing.JButton jButton27;
     private javax.swing.JButton jButton28;
+    private javax.swing.JButton jButton29;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
-    private javax.swing.JComboBox<String> jComboBox1;
+    public static javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JComboBox<String> jComboBox4;
+    public static javax.swing.JComboBox<String> jComboBox4;
     private javax.swing.JComboBox<String> jComboBox5;
     private javax.swing.JDialog jDialog1;
     private javax.swing.JLabel jLabel1;
@@ -1880,6 +2059,11 @@ float total = 0;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -1924,9 +2108,13 @@ float total = 0;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
+    private javax.swing.JTextField nsommeA;
     private javax.swing.JTextField nsommeT;
+    private javax.swing.JTextField restA;
     private javax.swing.JTextField restT;
+    private javax.swing.JTextField sommeA;
     private javax.swing.JTextField sommeT;
+    private javax.swing.JTextField vermentA;
     private javax.swing.JTextField vermentT;
     // End of variables declaration//GEN-END:variables
 }
